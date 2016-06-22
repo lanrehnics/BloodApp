@@ -1,9 +1,13 @@
 
 <ion-navbar *navbar>
   <ion-title>
-    Quiz
+    Question {{id + 1}}
   </ion-title>
 </ion-navbar>
 
 <ion-content padding class="quiz">
+  <h1>{{questions[id].question}}</h1>
+  <button block>Yes</button>
+  <button block (click)="nextQuestion()">No</button>
+  <button block>More Info About This Question</button>
 </ion-content>
