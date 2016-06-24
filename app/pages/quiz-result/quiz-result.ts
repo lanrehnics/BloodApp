@@ -18,50 +18,62 @@ export class QuizResultPage {
 
     this.responses = [
       {
-        response : 'Sorry You\'re too young to donate, once you\'re 16 you\'ll be able to donate.',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'Thanks for your interest, but you can\'t donate until you\'re 16.',
         moreinfo : 'http://www.donateblood.com.au/faq/age'
       },
       {
-        response : 'Sorry you\'re not eligible to donate.',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'Thanks for your interest, but unfortunately you can\'t give blood.',
         moreinfo : 'http://www.donateblood.com.au/faq/age'
       },
       {
-        response : 'Sorry you can\'t donate currently but once six months has passed after you got your tatoo you will be able to donate.',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'You can only donate blood 6 months after getting a tattoo.',
         moreinfo : 'http://www.donateblood.com.au/faq/tattoo'
       },
       {
-        response : 'Sorry you can\'t donate currently but nine months after the birth you will be able to.',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'You can donate again 9 months after the birth.',
         moreinfo : 'http://www.donateblood.com.au/faq/pregnancy'
       },
       {
-        response : 'Sorry you\re not eligible to donate.',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'Thanks for your interest, but unfortunately you can\'t give blood.',
         moreinfo : 'http://www.donateblood.com.au/faq/angina'
       },
       {
-        response : 'Sorry you\'re not eligible to donate but if you\'re iron levels become normal then you will be able to donate.',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'Add iron-rich foods to your diet, check iron levels with your GP and then you may be able to donate.',
         moreinfo : 'http://www.donateblood.com.au/faq/low-iron'
       },
       {
-        response : 'Sorry you\'re not eligible to donate.',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'Thanks for your interest, but unfortunately you can\'t give blood.',
         moreinfo : 'http://www.donateblood.com.au/faq/vcjd'
       },
       {
-        response : 'Sorry you\'re not eligible to donate for the next 12 months',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'Thanks for your interest, but unfortunately you can\'t give blood for the next 12 months.',
         moreinfo : 'http://www.donateblood.com.au/faq/sexual-activity'
       },
       {
-        response : 'Sorry you\'re not eligible to donate.',
+        title : 'Sorry, You Are Ineligible To Donate.',
+        response : 'Thanks for your interest, but unfortunately you can\'t give blood.',
         moreinfo : 'http://www.donateblood.com.au/faq/drug-use'
       },
       {
-        response : 'You may be able to donate. It depends where you travelled to.',
+        title : 'You May Be Eligible To Donate.',
+        response : 'Depending on your destination, you may be able to donate. Get more info below for the details',
         moreinfo : 'http://www.donateblood.com.au/faq/travel'
       },
       {
-        response : 'Congratulations!! You\'re eligible to donate. (Get more info to make sure you are eligible)',
+        title : 'Congratulations!! You\'re eligible to donate.',
+        response : 'Make sure you are eligible by looking at the other eligibility criteria.',
         moreinfo : 'http://www.donateblood.com.au/faq-list'
       },
       {
+        title : 'sdffsd',
         response : 'Congratulations!! You\'re eligible to donate. (Get more info to make sure you are eligible)',
         moreinfo : 'http://www.donateblood.com.au/faq-list'
 

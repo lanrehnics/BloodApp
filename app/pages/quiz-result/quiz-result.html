@@ -10,11 +10,11 @@
       <ion-icon name="arrow-back"></ion-icon>
     </button>
   </ion-buttons>
-  <ion-title>Here is your result</ion-title>
+  <ion-title>Result</ion-title>
 </ion-navbar>
 
 <ion-content padding class="quiz-result">
-<p>The id is: {{id}}</p>
-<h3>{{responses[id].response}}</h3>
-<button (click)="backToRoot()">Go Home<ion-icon name="home"></ion-icon></button>
+  <h3>{{responses[id].title}}</h3>
+  <p>{{responses[id].response}}</p>
+<a href="{{responses[id].moreinfo}}" target="_blank"><button block>More Info</button></a>
 </ion-content>
