@@ -73,7 +73,7 @@ export class QuizResultPage {
         moreinfo : 'http://www.donateblood.com.au/faq-list'
       },
       {
-        title : 'sdffsd',
+        title : 'Congratulations!! You\'re eligible to donate.',
         response : 'Congratulations!! You\'re eligible to donate. (Get more info to make sure you are eligible)',
         moreinfo : 'http://www.donateblood.com.au/faq-list'
 
