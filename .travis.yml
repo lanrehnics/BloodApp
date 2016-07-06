@@ -20,7 +20,6 @@ env:
 install:
   - npm install -g cordova ionic@beta
   - npm install
-  - bower update
 
 before_script:
   - wget http://dl.google.com/android/android-sdk_r24.4-linux.tgz
