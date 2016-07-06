@@ -1,21 +1,12 @@
-<!--
-  Generated template for the QuizResultPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-navbar *navbar primary hideBackButton>
-<ion-buttons left padding>
-  <button (click)="backToRoot()">
-      <ion-icon name="arrow-back"></ion-icon>
-    </button>
-  </ion-buttons>
-  <ion-title>Result</ion-title>
-</ion-navbar>
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>Result</ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content padding class="quiz-result">
   <h3>{{responses[id].title}}</h3>
   <p>{{responses[id].response}}</p>
-<a href="{{responses[id].moreinfo}}" target="_blank"><button block>More Info</button></a>
-<button block (click)="backToRoot()">Go Home</button>
+  <a href="{{responses[id].moreinfo}}" target="_blank"><button block>More Info</button></a>
+  <button block (click)="backToRoot()">Go Home</button>
 </ion-content>
