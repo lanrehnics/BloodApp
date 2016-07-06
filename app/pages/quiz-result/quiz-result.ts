@@ -74,7 +74,7 @@ export class QuizResultPage {
       },
       {
         title : 'Congratulations!! You\'re eligible to donate.',
-        response : 'Congratulations!! You\'re eligible to donate. (Get more info to make sure you are eligible)',
+        response : 'Make sure you are eligible by looking at the other eligibility criteria.',
         moreinfo : 'http://www.donateblood.com.au/faq-list'
 
       }
