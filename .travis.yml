@@ -12,6 +12,9 @@ addons:
     - lib32stdc++6
     - lib32z1
 env: CXX=g++-4.8
+cache:
+  directories:
+    - node_modules
 install:
 - npm install -g cordova ionic@beta
 - npm install
