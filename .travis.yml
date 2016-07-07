@@ -41,4 +41,4 @@ deploy:
   file: ./platforms/android/build/outputs/apk/android-debug.apk
   skip_cleanup: true
   on:
-    repo: logikt/QuizApp
+    repo: logikt/BloodApp
