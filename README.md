@@ -1,4 +1,4 @@
-# QuizApp [![Build Status](https://travis-ci.com/logikt/QuizApp.svg?token=7GyvvqHaLyModTPR4Hz6&branch=master)](https://travis-ci.com/logikt/QuizApp)
+# BloodApp [![Build Status](https://travis-ci.com/logikt/QuizApp.svg?token=7GyvvqHaLyModTPR4Hz6&branch=master)](https://travis-ci.com/logikt/QuizApp)
 
 ## How to set up development environment
 1. Make sure Nodejs(5.x Recommended) is installed

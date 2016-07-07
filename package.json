@@ -42,6 +42,6 @@
       "locator": "android"
     }
   ],
-  "name": "quizapp",
-  "description": "QuizApp: An Ionic project"
+  "name": "BloodApp",
+  "description": "A Blood Donation App"
 }
