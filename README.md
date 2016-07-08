@@ -13,5 +13,5 @@
 
 ## How to build the App
 1. Commit to the repository
-2. Download the build from [the releases page](https://github.com/logikt/QuizApp/releases) after ~5 minutes
+2. Download the build from [the releases page](https://github.com/logikt/QuizApp/releases) after 5-10 minutes
 3. If you don't want the app to be built add ```[ci skip]``` to the commit message
