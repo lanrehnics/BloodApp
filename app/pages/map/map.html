@@ -1,8 +1,19 @@
 <ion-header>
   <ion-navbar primary>
+    <ion-buttons start>
+    <button (click)="loadMap()">
+      <ion-icon name="map"></ion-icon>
+    </button>
+    <button (click)="addMarker()">
+      <ion-icon name="pin"></ion-icon>
+    </button>
+    <button (click)="saveLocation()">
+      <ion-icon name="compass"></ion-icon>
+    </button>
+  </ion-buttons>
     <ion-title>Map</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding class="map">
-  <h1>WORK IN PROGRESS</h1>
+<ion-content class="map">
+  <div id="map"></div>
 </ion-content>
