@@ -21,8 +21,9 @@ cache:
     - $(npm config get prefix)/bin/cordova
     - $(npm config get prefix)/bin/ionic
 install:
-- npm install -g cordova ionic@beta
+- npm install -g cordova ionic@beta typings
 - npm install
+- typings install
 before_script:
 - wget http://dl.google.com/android/android-sdk_r24.4-linux.tgz
 - tar -xvf android-sdk_r24.4-linux.tgz
@@ -45,4 +46,3 @@ deploy:
   skip_cleanup: true
   on:
     repo: logikt/BloodApp
-    

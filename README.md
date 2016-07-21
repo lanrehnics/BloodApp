@@ -5,7 +5,8 @@
 2. Install ionic 2, cordova and typings globally ```npm install -g ionic@beta cordova typings```
 3. Clone repository and navigate inside it
 4. Install npm dependencies ```npm install```
-5. Install Cordova plugins ```ionic state restore```
+5. Install Typings ```typings install```
+6. Install Cordova plugins ```ionic state restore```
 
 ## Recommended programs for development
 * [Atom](https://atom.io)
