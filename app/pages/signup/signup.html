@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>User Signup</h1>
+              <form  #loginCreds="ngForm" (ngSubmit)="signup(loginCreds.value)">
+              <ion-item>
+                  <ion-label>Email</ion-label>
+                  <ion-input type="text" ngControl="email"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Password</ion-label>
+                  <ion-input type="password" ngControl="password"></ion-input>
+              </ion-item>
+              <div padding>
+                  <button block type="submit">Sign Up</button>
+              </div>
+              <div padding>
+                  <p *ngIf="error" class="error">Error:&nbsp;{{ error.message }}</p>
+              </div>
+              </form>
+</ion-content>
