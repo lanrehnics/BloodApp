@@ -34,7 +34,7 @@ TODO
 ## How to build and deploy the app to the web
 1. Build the app for the browser platform ```ionic build browser```
 2. Install the Firebase CLI ```npm install -g firebase-tools```
-3. Login to the Firebase CLI ```firebase login``` (to be deploy the app to Firebase you will need a Google Account with access to the Firebase projects IonicBloodAppTabs and IonicBloodAppDrawer)
+3. Login to the Firebase CLI ```firebase login``` (to deploy the app to Firebase you will need a Google Account with access to the Firebase projects IonicBloodAppTabs and IonicBloodAppDrawer)
 4. Deploy to Firebase Hosting ```firebase deploy```
 
 ## Other Info
