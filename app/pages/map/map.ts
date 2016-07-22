@@ -9,8 +9,10 @@ export class MapPage {
   map: any;
   userLatLng: any;
   service: any;
+  loadBool: boolean;
   constructor(private navController: NavController) {
     this.saveLocation();
+    this.loadBool = true
   }
   loadMap(){
     this.saveLocation();
@@ -27,6 +29,7 @@ export class MapPage {
             this.userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             this.loadMap();
             this.searchPlaces();
+            this.loadBool = false;
         },
         (error) => {
           console.log(error);
