@@ -48,9 +48,8 @@ export class MapPage {
     this.service = new google.maps.places.PlacesService(this.map);
     this.service.textSearch({
           location: this.userLatLng,
-          radius: 3000,
-          type: ['point_of_interest'],
-          keyword: ['Australian Red Cross Blood Service']
+          radius: 30000 ,
+          query: "Australian Red Cross Blood Service"
         }, (results) => {
           for (var i = 0; i < results.length; i++) {
             var place = results[i];
