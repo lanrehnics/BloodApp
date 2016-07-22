@@ -15,7 +15,6 @@ export class MapPage {
     this.loadBool = true
   }
   loadMap(){
-    this.saveLocation();
     let mapOptions = {
       center: this.userLatLng,
       zoom: 11,
