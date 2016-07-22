@@ -12,9 +12,6 @@ export class MapPage {
   constructor(private navController: NavController) {
     this.saveLocation();
   }
-  ngOnInit(){
-    this.loadMap();
-  }
   loadMap(){
     this.saveLocation();
     let mapOptions = {
@@ -28,6 +25,8 @@ export class MapPage {
     navigator.geolocation.getCurrentPosition(
         (position) => {
             this.userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            this.loadMap();
+            this.searchPlaces();
         },
         (error) => {
           console.log(error);
