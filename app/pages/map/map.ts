@@ -18,7 +18,7 @@ export class MapPage {
     this.saveLocation();
     let mapOptions = {
       center: this.userLatLng,
-      zoom: 15,
+      zoom: 11,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -38,7 +38,10 @@ export class MapPage {
   }
   addInfoWindow(marker, content){
     let infoWindow = new google.maps.InfoWindow({
-      content: content
+      content: "<h5>" + content.name + "</h5>" +
+      "<p>" + content.formatted_address + "</p>"
+
+
     });
     google.maps.event.addListener(marker, 'click', function(){
       infoWindow.open(this.map, marker);
@@ -59,7 +62,7 @@ export class MapPage {
               map: this.map,
               position: results[i].geometry.location
             });
-            this.addInfoWindow(marker, place.name)
+            this.addInfoWindow(marker, place)
           };
         } );
 
