@@ -59,7 +59,8 @@ export class MapPage {
             var placeLoc = results[i].geometry.location;
             var marker = new google.maps.Marker({
               map: this.map,
-              position: results[i].geometry.location
+              position: results[i].geometry.location,
+              animation: google.maps.Animation.DROP
             });
             this.addInfoWindow(marker, place)
           };
