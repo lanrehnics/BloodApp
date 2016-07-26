@@ -17,8 +17,17 @@ export class LoginPage {
            console.log(value)
            this.dismiss()
        }).catch((error) => {
-           this.error = error
            console.log(error)
+           this.error = error
        });
    }
+   signup(credentials) {
+        this.auth.createUser(credentials).then((value) => {
+            console.log(value)
+            this.dismiss()
+        }).catch((error) => {
+            console.log(error)
+            this.error = error
+        });
+    }
 }

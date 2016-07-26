@@ -1,5 +1,10 @@
 <ion-header>
   <ion-navbar primary>
+    <ion-buttons start>
+    <button (click)="loginPush()">
+      <ion-icon name="person"></ion-icon>
+    </button>
+  </ion-buttons>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
@@ -8,8 +13,6 @@
   <h2>Welcome to A Blood Donation App</h2>
   <button block (click)="quizPush()">Are you eligible to donate blood?</button>
   <button block (click)="getFData()">Display the items</button>
-  <button block (click)="LoginPush()">Login</button>
-  <button block (click)="SignupPush()">Sign Up</button>
   <ion-card  *ngFor="let item of items | async">
                 <ion-card-header>Header:
                     {{item.name}}
