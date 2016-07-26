@@ -38,8 +38,9 @@ export class MapPage {
   addInfoWindow(marker, content){
     let infoWindow = new google.maps.InfoWindow({
       content: "<h5>" + content.name + "</h5>" +
-      "<p>" + content.formatted_address + "</p>"
-
+      "<p>" + content.formatted_address + "</p>" +
+      "<p>km away</p>" +
+      "<a target='_blank' href='http://maps.google.com/maps/place?cid=" + "'>View on Google Maps</a>"
 
     });
     google.maps.event.addListener(marker, 'click', function(){
