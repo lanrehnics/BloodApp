@@ -9,17 +9,15 @@ export class MapPage {
   map: any;
   userLatLng: any;
   service: any;
+  loadBool: boolean;
   constructor(private navController: NavController) {
     this.saveLocation();
-  }
-  ngOnInit(){
-    this.loadMap();
+    this.loadBool = true
   }
   loadMap(){
-    this.saveLocation();
     let mapOptions = {
       center: this.userLatLng,
-      zoom: 15,
+      zoom: 11,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -28,6 +26,9 @@ export class MapPage {
     navigator.geolocation.getCurrentPosition(
         (position) => {
             this.userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            this.loadMap();
+            this.searchPlaces();
+            this.loadBool = false;
         },
         (error) => {
           console.log(error);
@@ -36,7 +37,11 @@ export class MapPage {
   }
   addInfoWindow(marker, content){
     let infoWindow = new google.maps.InfoWindow({
-      content: content
+      content: "<h5>" + content.name + "</h5>" +
+      "<p>" + content.formatted_address + "</p>" +
+      "<p>km away</p>" +
+      "<a target='_blank' href='http://maps.google.com/maps/place?cid=" + "'>View on Google Maps</a>"
+
     });
     google.maps.event.addListener(marker, 'click', function(){
       infoWindow.open(this.map, marker);
@@ -46,9 +51,8 @@ export class MapPage {
     this.service = new google.maps.places.PlacesService(this.map);
     this.service.textSearch({
           location: this.userLatLng,
-          radius: 3000,
-          type: ['point_of_interest'],
-          keyword: ['Australian Red Cross Blood Service']
+          radius: 30000 ,
+          query: "Australian Red Cross Blood Service"
         }, (results) => {
           for (var i = 0; i < results.length; i++) {
             var place = results[i];
@@ -56,9 +60,10 @@ export class MapPage {
             var placeLoc = results[i].geometry.location;
             var marker = new google.maps.Marker({
               map: this.map,
-              position: results[i].geometry.location
+              position: results[i].geometry.location,
+              animation: google.maps.Animation.DROP
             });
-            this.addInfoWindow(marker, place.name)
+            this.addInfoWindow(marker, place)
           };
         } );
 

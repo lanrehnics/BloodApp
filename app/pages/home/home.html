@@ -10,8 +10,7 @@
 </ion-header>
 
 <ion-content padding class="home">
-  <h2>Welcome to A Blood Donation App</h2>
-  <button block (click)="quizPush()">Are you eligible to donate blood?</button>
+  <h2 text-center>Welcome to BloodApp</h2>
   <button block (click)="getFData()">Display the items</button>
   <ion-card  *ngFor="let item of items | async">
                 <ion-card-header>Header:
@@ -19,5 +18,23 @@
                 </ion-card-header>
                 <ion-card-content>
                 </ion-card-content>
+              </ion-card>
+  <ion-card>
+    <ion-card-content>
+    <ion-card-title>
+      Can You Donate Blood?
+      </ion-card-title>
+    <p>
+      See if you're eligible to donate blood.
+    </p>
+  </ion-card-content>
+  <ion-row no-padding>
+      <ion-col>
+        <button (click)="quizPush()" clear primary>
+          <ion-icon name='clipboard'></ion-icon>
+          Check your eligibility
+        </button>
+      </ion-col>
+    </ion-row>
   </ion-card>
 </ion-content>

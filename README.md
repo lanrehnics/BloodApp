@@ -1,4 +1,4 @@
-# BloodApp [![Build Status](https://travis-ci.com/logikt/BloodApp.svg?token=7GyvvqHaLyModTPR4Hz6&branch=master)](https://travis-ci.com/logikt/BloodApp)
+# BloodApp
 
 ## How to set up development environment
 1. Make sure Nodejs(5.x Recommended) is installed
@@ -23,7 +23,7 @@
 ## How to build the app for Android Locally
 TODO
 
-## How to build the app for Android on Travis CI
+## (CURRENTLY DISABLED) How to build the app for Android on Travis CI
 1. Commit to the repository
 2. Download the build from [the releases page](https://github.com/logikt/QuizApp/releases) after 5-10 minutes
 3. If you don't want the app to be built add ```[ci skip]``` to the commit message (Please do this when your commit does not change the source of the app (e.g. changes to the README) as we only have 100 builds a month)
