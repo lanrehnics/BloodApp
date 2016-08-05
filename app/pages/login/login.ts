@@ -14,20 +14,20 @@ export class LoginPage {
     }
   login(credentials) {
        this.auth.login(credentials).then((value) => {
-           console.log(value)
-           this.dismiss()
+           console.log(value);
+           this.dismiss();
        }).catch((error) => {
-           console.log(error)
-           this.error = error
+           console.log(error);
+           this.error = error;
        });
    }
    signup(credentials) {
         this.auth.createUser(credentials).then((value) => {
-            console.log(value)
-            this.dismiss()
+            console.log(value);
+            this.dismiss();
         }).catch((error) => {
-            console.log(error)
-            this.error = error
+            console.log(error);
+            this.error = error;
         });
     }
 }
