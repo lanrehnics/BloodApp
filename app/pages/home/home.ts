@@ -14,7 +14,14 @@ export class HomePage {
   authObject: any;
   constructor(private navController: NavController, private params: NavParams, public af: AngularFire) {
     this.navController = navController;
-
+    firebase.auth().onAuthStateChanged((user)=> {
+      if (user) {
+        this.getFData();
+      }
+      else {
+        this.items = null;
+      }
+    });
   }
   loginPush(){
     this.navController.push(LoginPage);
