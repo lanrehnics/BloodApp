@@ -1,19 +1,29 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {AngularFire, FirebaseListObservable, FirebaseAuth, AngularFireAuth, AuthProviders} from 'angularfire2';
 
-/*
-  Generated class for the QuizResultPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   templateUrl: 'build/pages/quiz-result/quiz-result.html',
 })
 export class QuizResultPage {
-  responses;
-  id;
-  constructor(private nav: NavController, private params: NavParams) {
+  responses: any;
+  id: number;
+  items: any;
+  constructor(private nav: NavController, private params: NavParams, private af: AngularFire) {
+    firebase.auth().onAuthStateChanged((user)=> {
+      if (user) {
+        this.items = this.af.database.list('/users/' + user.uid);
+        if (this.id == 11) {
+          this.items.update('info', { canDonate : true });
+        }
+        else {
+          this.items.update('info', { canDonate : false });
+        }
+      }
+      else {
+        this.items = null;
+      }
+    });
     this.id = params.get("id");
 
     this.responses = [
