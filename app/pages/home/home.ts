@@ -11,12 +11,11 @@ import {Observable} from 'rxjs/Observable';
 })
 export class HomePage {
   items: FirebaseListObservable<any[]>;
-  authObject: any;
   constructor(private navController: NavController, private params: NavParams, public af: AngularFire) {
     this.navController = navController;
     firebase.auth().onAuthStateChanged((user)=> {
       if (user) {
-        this.getFData();
+        this.items = this.af.database.list('/users/' + user.uid);
       }
       else {
         this.items = null;
@@ -26,20 +25,10 @@ export class HomePage {
   loginPush(){
     this.navController.push(LoginPage);
   }
-  getFData(){
-    this.saveAuthData();
-    this.items = this.af.database.list('/users/' + this.authObject.uid);
-  }
   quizPush() {
     this.navController.push(QuizPage, {
             id : 0
-        });
-  }
-  saveAuthData(){
-    this.authObject = firebase.auth().currentUser;
-  }
-  setElig(result){
-    this.items.update('info', { canDonate : result }
-    )
+          }
+    );
   }
 }

@@ -11,8 +11,6 @@
 
 <ion-content padding class="home">
   <h2 text-center>Welcome to BloodApp</h2>
-  <button block (click)="setElig(true)">Set eligibility to true</button>
-  <button block (click)="setElig(false)">Set eligibility to false</button>
   <div *ngFor="let item of items | async">
     <ion-card *ngIf="item.canDonate">
       <ion-card-title padding>
