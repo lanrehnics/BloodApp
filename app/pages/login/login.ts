@@ -10,6 +10,10 @@ export class LoginPage {
   error: any;
   loggedIn: boolean;
   facebookLoggedIn: boolean;
+  loginForm: any = {
+    email: "",
+    password: ""
+  };
   constructor(private nav: NavController, public auth: FirebaseAuth, public viewCtrl: ViewController) {
     this.loggedIn = false;
     this.facebookLoggedIn = false;
@@ -18,23 +22,28 @@ export class LoginPage {
   dismiss() {
         this.viewCtrl.dismiss();
   }
-  login(credentials) {
-    this.auth.login(credentials).then((value) => {
+  login() {
+    this.auth.login(this.loginForm).then((value) => {
+      this.dismiss();
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+  signup() {
+    this.auth.createUser(this.loginForm).then((value) => {
       this.dismiss();
     }).catch((error) => {
       this.error = error;
     });
   }
-  signup(credentials) {
-    this.auth.createUser(credentials).then((value) => {
-      this.dismiss();
-    }).catch((error) => {
-      this.error = error;
-    });
-  }
-  facebookLoginNative(){
+  facebookLoginNative(b){
     Facebook.login(["public_profile", "email"]).then((res) => {
-      this.facebookFireAuthenticate();
+      if (b){
+        this.facebookFireAuthenticate();
+      }
+      else {
+        this.facebookFireLink();
+      }
     });
     }
 
@@ -98,5 +107,31 @@ export class LoginPage {
         }
       });
     }
+  }
+  facebookFireLink(){
+    Facebook.getLoginStatus().then((res) => {
+      if (res.authResponse) {
+        // User is signed-in Facebook.
+        var unsubscribe = firebase.auth().onAuthStateChanged( (firebaseUser) => {
+          unsubscribe();
+          // Check if we are already signed-in Firebase with the correct user.
+          if (!this.isUserEqual(res.authResponse, firebaseUser)) {
+            // Build Firebase credential with the Facebook auth token.
+            var credential = firebase.auth.FacebookAuthProvider.credential(
+              res.authResponse.accessToken);
+              // Sign in with the credential from the Facebook user.
+              firebase.auth().currentUser.link(credential).then((success) => {
+                this.dismiss();
+              }).catch((error) => {
+                });
+              } else {
+                this.dismiss();
+              }
+            });
+          } else {
+            // User is signed-out of Facebook.
+            firebase.auth().signOut();
+          }
+        });
   }
 }
