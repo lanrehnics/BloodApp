@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content padding>
-              <div *ngIf="!loadAccountBool">
               <form  #loginCreds="ngForm" *ngIf="!loggedIn">
               <ion-item>
                   <ion-label floating>Email</ion-label>
@@ -24,6 +23,4 @@
                   <button block *ngIf="loggedIn"(click)="logout()">Logout</button>
                   <button block *ngIf="!facebookLoggedIn"id="facebookbtn"(click)="facebookLoginNative()"><ion-icon name="logo-facebook"></ion-icon>Login with Facebook</button>
               </div>
-            </div>
-            <ion-spinner  id="loadlogin" *ngIf="loadAccountBool" name="spinner"></ion-spinner>
 </ion-content>

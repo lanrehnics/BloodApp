@@ -10,28 +10,22 @@ export class LoginPage {
   error: any;
   loggedIn: boolean;
   facebookLoggedIn: boolean;
-  loadAccountBool: boolean;
   constructor(private nav: NavController, public auth: FirebaseAuth, public viewCtrl: ViewController) {
     this.loggedIn = false;
     this.facebookLoggedIn = false;
-    this.loadAccountBool = false;
     this.checkLoginStatus();
   }
   dismiss() {
         this.viewCtrl.dismiss();
   }
   login(credentials) {
-    this.loadAccountBool = true;
     this.auth.login(credentials).then((value) => {
-      this.loadAccountBool = false;
       this.dismiss();
     }).catch((error) => {
-      this.loadAccountBool = false;
       this.error = error;
     });
   }
   signup(credentials) {
-    this.loadAccountBool = true;
     this.auth.createUser(credentials).then((value) => {
       this.dismiss();
     }).catch((error) => {
