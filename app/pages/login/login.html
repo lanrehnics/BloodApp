@@ -1,11 +1,12 @@
 <ion-header>
   <ion-navbar primary>
-    <ion-title>Login</ion-title>
+    <ion-title>Account</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-              <form  #loginCreds="ngForm">
+              <div *ngIf="!loadAccountBool">
+              <form  #loginCreds="ngForm" *ngIf="!loggedIn">
               <ion-item>
                   <ion-label floating>Email</ion-label>
                   <ion-input type="text" ngControl="email"></ion-input>
@@ -18,8 +19,11 @@
                   <button block (click)="login(loginCreds.value)">Login</button>
                   <button block (click)="signup(loginCreds.value)">Sign Up</button>
               </div>
-              <div padding>
-                  <p *ngIf="error" class="error">Error:&nbsp;{{ error.message }}</p>
-              </div>
               </form>
+              <div padding>
+                  <button block *ngIf="loggedIn"(click)="logout()">Logout</button>
+                  <button block *ngIf="!facebookLoggedIn"id="facebookbtn"(click)="facebookLoginNative()"><ion-icon name="logo-facebook"></ion-icon>Login with Facebook</button>
+              </div>
+            </div>
+            <ion-spinner  id="loadlogin" *ngIf="loadAccountBool" name="spinner"></ion-spinner>
 </ion-content>
