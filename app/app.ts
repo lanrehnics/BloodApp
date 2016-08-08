@@ -4,7 +4,7 @@ import {StatusBar} from 'ionic-native';
 import {TabsPage} from './pages/tabs/tabs';
 import {Splashscreen} from 'ionic-native';
 import { FIREBASE_PROVIDERS, defaultFirebase, AngularFire, firebaseAuthConfig, AuthProviders, AuthMethods} from 'angularfire2';
-
+import {AuthProvider} from './providers/auth/auth';
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
   providers: [
@@ -40,4 +40,4 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp)
+ionicBootstrap(MyApp, [AuthProvider]);
