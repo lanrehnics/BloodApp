@@ -39,7 +39,6 @@ export class MapPage {
     let infoWindow = new google.maps.InfoWindow({
       content: "<h5>" + content.name + "</h5>" +
       "<p>" + content.formatted_address + "</p>" +
-      "<p>km away</p>" +
       "<a target='_blank' href='geo:"+ content.geometry.location.lat() + "," + content.geometry.location.lng() + "?q=" + encodeURI(content.name) + "'>View on Google Maps</a>"
 
     });
