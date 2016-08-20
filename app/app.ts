@@ -5,6 +5,7 @@ import {TabsPage} from './pages/tabs/tabs';
 import {Splashscreen} from 'ionic-native';
 import { FIREBASE_PROVIDERS, defaultFirebase, AngularFire, firebaseAuthConfig, AuthProviders, AuthMethods} from 'angularfire2';
 import {AuthProvider} from './providers/auth/auth';
+declare const codePush: CodePushCordovaPlugin;
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
   providers: [
@@ -36,6 +37,7 @@ export class MyApp {
       StatusBar.styleDefault();
       StatusBar.backgroundColorByHexString('#d32f2f');
       Splashscreen.hide();
+      codePush.sync();
     });
   }
 }
