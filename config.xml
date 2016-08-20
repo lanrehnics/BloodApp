@@ -101,4 +101,8 @@
       <variable name="APP_NAME" value="BloodApp" />
   </plugin>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
+  <plugin name="cordova-plugin-googlemaps" spec="https://github.com/phonegap-googlemaps-plugin/cordova-plugin-googlemaps">
+      <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDC1qMAbDdiitm02Npq06PA3GWJCA3oLWo" />
+      <variable name="API_KEY_FOR_IOS" value="YAIzaSyBVPH3FgdB_XGDThdf0NNZpZsel95Hp2zE" />
+  </plugin>
 </widget>
