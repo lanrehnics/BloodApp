@@ -19,9 +19,9 @@ export class SettingsPage {
     codePush.getCurrentPackage((result: ILocalPackage) => {
       this.currentPackage = result;
       this.appRef.tick();
-    })
+    });
   }
-  checkForUpdate(key) {
+  checkForUpdate() {
     this.isProcessing = true;
     this.status = 'Checking for Update'
     codePush.checkForUpdate((result) => {
@@ -29,7 +29,7 @@ export class SettingsPage {
       this.status = result === null ? 'Up to Date' : 'Update Available'
       this.isProcessing = false;
       this.appRef.tick();
-    }, null, key);
+    });
   }
 
   syncHandler(status: SyncStatus) {

@@ -12,7 +12,7 @@
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
   <platform name="android">
-    <preference name="CodePushDeploymentKey" value="fyZJi_BktwTdWQBExyFmHza48twd4kiCt3x5-" />
+    <preference name="CodePushDeploymentKey" value="jbUTt4jo9iuigLaNMQFy9l8E-LeG4kiCt3x5-" />
     <allow-intent href="market:*"/>
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.INTERNET"/>
