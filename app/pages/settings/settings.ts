@@ -1,5 +1,5 @@
 import { Component, ApplicationRef } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, Storage, LocalStorage } from 'ionic-angular';
 declare const codePush: CodePushCordovaPlugin;
 @Component({
   templateUrl: 'build/pages/settings/settings.html',
@@ -10,7 +10,12 @@ export class SettingsPage {
   isProcessing: boolean = false;
   currentPackage: ILocalPackage;
   downloadProgress: DownloadProgress;
+  storage: Storage = new Storage(LocalStorage);
+  mapType: string;
   constructor(private appRef: ApplicationRef, private platform: Platform) {
+    this.storage.get('mapMode').then((result) => {
+      this.mapType = result;
+    });
   }
   ngOnInit() {
     this.platform.ready().then(()=>this.getCurrentPackage())
@@ -75,5 +80,8 @@ export class SettingsPage {
      },
       (progress) => this.updateDownloadProgress(progress));
   }
-
+  setMapMode(mode) {
+    this.storage.set('mapMode', mode);
+    this.mapType = mode;
+  }
 }
