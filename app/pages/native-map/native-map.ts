@@ -15,7 +15,9 @@ export class NativeMapPage {
           (position) => {
               this.userLatLng = new GoogleMapsLatLng(position.coords.latitude, position.coords.longitude);
               this.loadMap();
-              this.searchPlaces();
+              this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
+                this.searchPlaces();
+              });
           },
           (error) => {
             console.log(error);
