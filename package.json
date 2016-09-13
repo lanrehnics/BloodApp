@@ -38,7 +38,6 @@
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard",
-    "cordova-plugin-inappbrowser",
     "cordova-plugin-geolocation",
     "cordova-plugin-compat",
     "cordova-custom-config",
@@ -53,9 +52,9 @@
   ],
   "cordovaPlatforms": [
     {
-      "platform": "android",
+      "platform": "browser",
       "version": "",
-      "locator": "android"
+      "locator": "browser"
     }
   ],
   "name": "BloodApp",
