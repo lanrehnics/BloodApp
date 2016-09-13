@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {QuizPage} from '../quiz/quiz';
 import {LoginPage} from '../login/login';
-import {SettingsPage} from '../settings/settings';
 import {AngularFire, FirebaseListObservable, FirebaseAuth, AngularFireAuth, AuthProviders} from 'angularfire2';
 import {Observable} from 'rxjs/Observable';
 
@@ -25,9 +24,6 @@ export class HomePage {
   }
   loginPush(){
     this.navController.push(LoginPage);
-  }
-  settingsPush(){
-    this.navController.push(SettingsPage);
   }
   quizPush() {
     this.navController.push(QuizPage, {
