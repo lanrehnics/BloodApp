@@ -20,7 +20,5 @@
   </div>
   <div padding>
     <button block *ngIf="loggedIn"(click)="logout()">Logout</button>
-    <button block *ngIf="!loggedIn" id="facebookbtn"(click)="facebookLoginNative(true)"><ion-icon name="logo-facebook"></ion-icon>Login with Facebook</button>
-    <button block *ngIf="loggedIn && !facebookLoggedIn"id="facebookbtn"(click)="facebookLoginNative(false)"><ion-icon name="logo-facebook"></ion-icon>Connect Account to Facebook</button>
   </div>
 </ion-content>
