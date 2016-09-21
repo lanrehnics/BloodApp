@@ -97,10 +97,6 @@
   <plugin name="cordova-plugin-compat" spec="~1.0.0"/>
   <plugin name="cordova-plugin-geolocation" spec="~2.2.0"/>
   <plugin name="cordova-custom-config" spec="~2.0.2"/>
-  <plugin name="cordova-plugin-facebook4" spec="~1.7.1">
-      <variable name="APP_ID" value="1716571461939874" />
-      <variable name="APP_NAME" value="BloodApp" />
-  </plugin>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
   <plugin name="cordova-plugin-googlemaps" spec="https://github.com/phonegap-googlemaps-plugin/cordova-plugin-googlemaps">
       <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDC1qMAbDdiitm02Npq06PA3GWJCA3oLWo" />
