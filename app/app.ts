@@ -3,25 +3,8 @@ import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {TabsPage} from './pages/tabs/tabs';
 import {Splashscreen} from 'ionic-native';
-import { FIREBASE_PROVIDERS, defaultFirebase, AngularFire, firebaseAuthConfig, AuthProviders, AuthMethods} from 'angularfire2';
-import {AuthProvider} from './providers/auth/auth';
 @Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>',
-  providers: [
-       FIREBASE_PROVIDERS,
-       defaultFirebase({
-         apiKey: "AIzaSyCVW2NYvsoQVVcodOoKsYH2_j_UDuRmq4o",
-         authDomain: "ionicbloodappfire.firebaseapp.com",
-         databaseURL: "https://ionicbloodappfire.firebaseio.com",
-         storageBucket: "ionicbloodappfire.appspot.com"
-       }),
-       firebaseAuthConfig({
-            provider: AuthProviders.Password,
-            method: AuthMethods.Password,
-            remember: 'default',
-            scope: ['email']
-        })
-   ],
+  template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
 
@@ -40,4 +23,4 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp, [AuthProvider]);
+ionicBootstrap(MyApp);
