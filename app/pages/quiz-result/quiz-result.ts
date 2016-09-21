@@ -39,7 +39,7 @@ export class QuizResultPage {
       },
       {
         title : 'Sorry, You Are Ineligible To Donate.',
-        response : 'You can only donate blood 6 months after getting a tattoo.',
+        response : 'You can only donate blood 4 months after getting a tattoo.',
         moreinfo : 'http://www.donateblood.com.au/faq/tattoo'
       },
       {
