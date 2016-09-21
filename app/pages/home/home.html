@@ -6,24 +6,6 @@
 
 <ion-content padding class="home">
   <h2 text-center>Welcome to Pocket Blood</h2>
-  <div *ngFor="let item of items | async">
-    <ion-card *ngIf="item.canDonate">
-      <ion-card-title padding>
-        Congratulations you can donate blood!!!
-      </ion-card-title>
-      <ion-card-content>
-        <p>Go to the Map tab to see where you can donate.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card *ngIf="!item.canDonate">
-      <ion-card-title padding>
-        Sorry, you cannot donate blood
-      </ion-card-title>
-      <ion-card-content>
-        <p></p>
-      </ion-card-content>
-    </ion-card>
-  </div>
   <ion-card>
     <ion-card-content>
     <ion-card-title>
