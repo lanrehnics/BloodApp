@@ -17,7 +17,7 @@ export class QuizPage {
       moreinfo : 'http://www.donateblood.com.au/faq/age'
     },
     {
-      question : 'Have you had a tattoo in the last 6 months?',
+      question : 'Have you had a tattoo in the last 4 months?',
       moreinfo : 'http://www.donateblood.com.au/faq/tattoo'
     },
     {
