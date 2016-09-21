@@ -39,7 +39,7 @@ export class MapPage {
     let infoWindow = new google.maps.InfoWindow({
       content: "<h5>" + content.name + "</h5>" +
       "<p>" + content.formatted_address + "</p>" +
-      "<a target='_blank' href='geo:"+ content.geometry.location.lat() + "," + content.geometry.location.lng() + "?q=" + encodeURI(content.name) + "'>View on Google Maps</a>"
+      "<a target='_blank' href='https://www.google.com.au/maps/search/" + encodeURI(content.name) + "/@" + content.geometry.location.lat() + "," + content.geometry.location.lng() + ",15z'" + ">View on Google Maps</a>"
 
     });
     google.maps.event.addListener(marker, 'click', function(){
