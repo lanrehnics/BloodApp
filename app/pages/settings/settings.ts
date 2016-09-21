@@ -13,9 +13,6 @@ export class SettingsPage {
   storage: Storage = new Storage(LocalStorage);
   mapType: string;
   constructor(private appRef: ApplicationRef, private platform: Platform) {
-    this.storage.get('mapMode').then((result) => {
-      this.mapType = result;
-    });
   }
   ngOnInit() {
     this.platform.ready().then(()=>this.getCurrentPackage())
@@ -79,9 +76,5 @@ export class SettingsPage {
       installMode: InstallMode.IMMEDIATE
      },
       (progress) => this.updateDownloadProgress(progress));
-  }
-  setMapMode(mode) {
-    this.storage.set('mapMode', mode);
-    this.mapType = mode;
   }
 }
