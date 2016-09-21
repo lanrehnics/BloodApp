@@ -39,15 +39,7 @@
     "cordova-plugin-inappbrowser",
     "cordova-plugin-geolocation",
     "cordova-plugin-compat",
-    "cordova-custom-config",
-    {
-      "id": "cordova-plugin-facebook4",
-      "locator": "cordova-plugin-facebook4",
-      "variables": {
-        "APP_ID": "1716571461939874",
-        "APP_NAME": "BloodApp"
-      }
-    }
+    "cordova-custom-config"
   ],
   "cordovaPlatforms": [
     {
@@ -56,6 +48,6 @@
       "locator": "android"
     }
   ],
-  "name": "BloodApp",
-  "description": "A Blood Donation App"
+  "name": "Pocket Blood",
+  "description": "An App For Blood Donors"
 }
