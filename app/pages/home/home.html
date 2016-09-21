@@ -1,37 +1,11 @@
 <ion-header>
   <ion-navbar primary>
-    <ion-buttons start>
-    <button (click)="loginPush()">
-      <ion-icon name="person"></ion-icon>
-    </button>
-    <button (click)="settingsPush()">
-      <ion-icon name="settings"></ion-icon>
-    </button>
-  </ion-buttons>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="home">
-  <h2 text-center>Welcome to BloodApp</h2>
-  <div *ngFor="let item of items | async">
-    <ion-card *ngIf="item.canDonate">
-      <ion-card-title padding>
-        Congratulations you can donate blood!!!
-      </ion-card-title>
-      <ion-card-content>
-        <p>Go to the Map tab to see where you can donate.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card *ngIf="!item.canDonate">
-      <ion-card-title padding>
-        Sorry, you cannot donate blood
-      </ion-card-title>
-      <ion-card-content>
-        <p></p>
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <h2 text-center>Welcome to Pocket Blood</h2>
   <ion-card>
     <ion-card-content>
     <ion-card-title>

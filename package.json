@@ -7,9 +7,7 @@
     "@angular/http": "2.0.0-rc.4",
     "@angular/platform-browser": "2.0.0-rc.4",
     "@angular/platform-browser-dynamic": "2.0.0-rc.4",
-    "angularfire2": "2.0.0-beta.2",
     "es6-shim": "0.35.0",
-    "firebase": "3.2.0",
     "ionic-angular": "2.0.0-beta.11",
     "ionic-native": "1.3.10",
     "ionicons": "3.0.0",
@@ -41,15 +39,7 @@
     "cordova-plugin-inappbrowser",
     "cordova-plugin-geolocation",
     "cordova-plugin-compat",
-    "cordova-custom-config",
-    {
-      "id": "cordova-plugin-facebook4",
-      "locator": "cordova-plugin-facebook4",
-      "variables": {
-        "APP_ID": "1716571461939874",
-        "APP_NAME": "BloodApp"
-      }
-    }
+    "cordova-custom-config"
   ],
   "cordovaPlatforms": [
     {
@@ -58,6 +48,6 @@
       "locator": "android"
     }
   ],
-  "name": "BloodApp",
-  "description": "A Blood Donation App"
+  "name": "Pocket Blood",
+  "description": "An App For Blood Donors"
 }
