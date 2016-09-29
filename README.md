@@ -8,11 +8,10 @@
   * [bloodapp.mitchellhamilton.me](https://bloodapp.mitchellhamilton.me)
 ## How to set up development environment
 1. Make sure Nodejs(5.x Recommended) is installed
-2. Install ionic 2, cordova and typings globally ```npm install -g ionic@beta cordova typings```
+2. Install Ionic and Cordova globally ```npm install -g ionic cordova```
 3. Clone repository and navigate inside it
 4. Install npm dependencies ```npm install```
-5. Install Typings ```typings install```
-6. Install Cordova plugins ```ionic state restore```
+6. Install Cordova plugins ```cordova platform add android```
 
 ## Recommended programs for development
 * [Atom](https://atom.io)

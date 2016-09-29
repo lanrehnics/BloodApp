@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <h2 text-center>Welcome to Pocket Blood</h2>
+  <ion-card>
+    <ion-card-content>
+    <ion-card-title>
+      Can You Donate Blood?
+    </ion-card-title>
+    <p>See if you're eligible to donate blood.</p>
+  </ion-card-content>
+  <ion-row no-padding>
+      <ion-col>
+        <button icon-right ion-button clear (click)="quizPush()">
+          <ion-icon name='clipboard'></ion-icon>
+          &nbsp;Check your eligibility
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Date
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="radioType">
+    <ion-list-header>Type and Date of Donation</ion-list-header>
+    <ion-item>
+      <ion-label>Whole Blood</ion-label>
+      <ion-radio value="12"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Plasma and Platelet</ion-label>
+      <ion-radio value="2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date of Donation</ion-label>
+      <ion-datetime displayFormat="DDDD, D MMMM YYYY" pickerFormat="D MMMM YYYY" [(ngModel)]="inputDate"></ion-datetime>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="getNextDate()" block>See when you are eligible to donate again</button>
+  <a *ngIf="nextDate == 'Today'" target="_blank" href="https://www.donateblood.com.au/make-appointment"><button ion-button block>Make an Appointment</button></a>
+  <p>You are eligible to donate again on: {{nextDate}}</p>
+</ion-content>
