@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Question {{id + 1}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quiz">
+  <h1>{{questions[id].question}}</h1>
+  <ion-row>
+    <ion-col width-50>
+      <button ion-button block (click)="goToQuizResultFail()">Yes</button>
+    </ion-col>
+    <ion-col width-50>
+      <button ion-button block (click)="nextQuestion()">No</button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col width-100>
+      <a href="{{questions[id].moreinfo}}" target="_blank"><button ion-button block>More Info About This Question</button></a>
+    </ion-col>
+  </ion-row>
+</ion-content>
