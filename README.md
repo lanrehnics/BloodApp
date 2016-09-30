@@ -6,6 +6,7 @@
   * [Google Play Store Listing](https://play.google.com/store/apps/details?id=me.mitchellhamilton.BloodApp)
 * Web
   * [bloodapp.mitchellhamilton.me](https://bloodapp.mitchellhamilton.me)
+  
 ## How to set up development environment
 1. Make sure Nodejs(5.x Recommended) is installed
 2. Install Ionic and Cordova globally ```npm install -g ionic cordova```
